@@ -1,3 +1,5 @@
+#CUPP
+
 cd /home
 mkdir CUPP
 cd CUPP
@@ -20,4 +22,9 @@ cat daniel.txt
 apt update
 apt install leafpad -y
 leafpad daniel.txt
+______________________________________________________________________________
+
+#Netdiscover
+
+netdiscover -r ipaddress
 
