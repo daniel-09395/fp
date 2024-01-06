@@ -1,0 +1,40 @@
+#Hashing
+
+#Practical-8: Hash for password
+
+print("Daniel - 11")
+
+import hashlib
+
+def gen_hash(password):
+    pass_word=password.encode('utf-8') #utf (unicode transformation format, 8 stands for 8-bits)
+    hash_pass=hashlib.sha256(pass_word).hexdigest() #SHA 256 bit Algorithm- Secure Hash Algorithm
+    return hash_pass
+
+password="inevitable"
+hash_pass=gen_hash(password)
+print("HASHED PASSWORD FOR YOUR PASSWORD:",hash_pass)
+---------------------------------------------------------------------------------------------------------------
+
+#Salting
+
+#Salt is a random value that is generated and combined with user's password before hashing to enhance the security of stored passwords.
+
+print("Mitali - 41")
+
+import hashlib
+import os
+
+def gen_salt():
+    return os.urandom(16) 
+
+def gen_hash(password,salt):
+    pass_word_salt=password.encode('utf-8')+salt #utf (unicode transformation format, 8 stands for 8-bits)
+    hash_pass=hashlib.sha256(pass_word_salt).hexdigest() #SHA 256 bit Algorithm- Secure Hash Algorithm
+    return hash_pass,salt
+
+password="inevitable"
+salt=gen_salt()
+hash_pass,salt=gen_hash(password,salt)
+print("HASHED PASSWORD FOR YOUR PASSWORD:",hash_pass)
+print("SALT VALUE:",salt)
