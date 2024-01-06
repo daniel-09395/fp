@@ -1,0 +1,19 @@
+print("Daniel - 11")
+
+seq=[1,0,1,0,1,0]
+sum_req=sum(seq)
+pari_bit=0 if sum_req % 2 ==0 else 1
+bin_pari=seq + [pari_bit]
+
+print("Original sequence:",''.join(map(str,seq)))
+print("Sequence with parity:",''.join(map(str,bin_pari)))
+
+rec_par=bin_pari[-1]
+rec_data=bin_pari[:-1] #Extracting data
+
+rec_sum=sum(rec_data)
+if rec_sum % 2 == rec_par:
+  print("Data integrity matches/intact")
+
+else:
+  print("Data Corrupted!")
