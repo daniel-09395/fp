@@ -1,0 +1,7 @@
+#SNOW
+
+go to snow dir after extracting and open cmd from that path
+
+dir
+snow.exe -C-p 1234 -m "Hidden Message" input.txt output.txt
+snow.exe -C -p 1234 hidden.txt
