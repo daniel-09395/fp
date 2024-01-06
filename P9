@@ -1,0 +1,59 @@
+#Buffer Overflow
+
+nano buffer.c
+
+#include <stdio.h>
+
+int test_pw()
+{
+char pin[10];
+int x=15, i;
+printf("Enter Password:\n");
+scanf("%s",pin);
+for(i=0; i<10; i+=2) x=(x & pin[i]) | pin[i+1];
+if(x==48) return 0;
+else return 1;
+}
+void main
+{
+if(test_pw()) print("Fail!\n");
+else printf("You Win!\n");
+}
+
+
+gcc -g -static --no-pie -o buf buffer.c
+./buf
+
+./buf
+
+./buf
+--------------------------------------------------------------------------
+
+#format string attack
+
+nano string.c
+
+#include <stdio.h>
+void main (int argc,char **argv)
+{
+printf(argv[1]);
+}
+
+gcc -o test string.c
+./test "Any text"
+
+./test "%s %s %s"
+
+
+nano pythonstr.py
+
+import sys
+import subprocess
+a="./test"
+b=sys.argv[1]
+subprocess.run([a,b])
+
+python pythonstr.py "any text"
+
+python pythonstr.py "%c %p"
+
