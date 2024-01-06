@@ -1,0 +1,35 @@
+#code in root terminal
+ifconfig 
+
+cd /home
+mkdir daniel
+cd daniel
+cat > abc.txt
+HELLO!
+
+apt update
+apt install openssh-server
+ufw status
+ufw enable
+ufw allow 22/tcp
+
+service ssh start
+service ssh status
+
+#codes in putty
+
+kali
+your kali password
+
+sudo -l
+yourkalipassword
+
+cd /home
+ls
+
+cd daniel
+ls
+
+cat abc.txt
+HELLO!
+
